@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>Cursor</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank">
+                            <h4>Functions</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="package.html" target="_blank" >
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h2 class="fonty">Cursor</h2>
+            <p>When an SQL statement is processed, Oracle creates a memory area known as context area. A cursor is a
+                pointer to this context area. It contains all information needed for processing the statement. In
+                PL/SQL, the context area is controlled by Cursor. A cursor contains information on a select statement
+                and the rows of data accessed by it.</p>
+            <img src="../image/cursor.png" style="border: 2px solid #4361ee" alt="output image">
+            <p>A cursor is used to referred to a program to fetch and process the rows returned by the SQL statement,
+                one at a time. There are two types of cursors: <br>
+                <i>(i) Implicit Cursors </i><br>
+                <i>(ii) Explicit Cursors
+            </p></i>
+            <img src="../image/curso1.png" style="border: 2px solid #4361ee" alt="output image">
+        </section>
+        <section>
+            <h2 class="fonty">(i) Implicit Cursors</h2>
+            <br>
+            <p>The implicit cursors are automatically generated by Oracle while an SQL statement is executed, if you
+                don't use an explicit cursor for the statement. <br>
+                These are created by default to process the statements when DML statements like INSERT, UPDATE, DELETE
+                etc. are executed.</p>
+            <br>
+            <h2 class="fonty">Implicit /Explicit Cursor Attributes</h2><br>
+            <p>They are various Attributes used in the cursor :</p>
+
+            <p><i> <span style="color:blue">(i) %FOUND :</span> </i>Its return value is TRUE if DML statements like
+                INSERT, DELETE and UPDATE affect at least one row or more rows or a SELECT INTO statement returned one
+                or more rows. Otherwise it returns FALSE.</p>
+
+            <p><i> <span style="color:blue"> %NOTFOUND : </span>(ii) </i>Its return value is TRUE if DML statements like
+                INSERT, DELETE and UPDATE affect no row, or a SELECT INTO statement return no rows. Otherwise it returns
+                FALSE. It is a just opposite of %FOUND.</p>
+
+            <p><i> <span style="color:blue"> %ROWCOUNT : </span>(iii)</i>It returns the number of rows affected by DML
+                statements like INSERT, DELETE, and UPDATE or returned by a SELECT INTO statement.</p>
+            <h2 class="fonty">The Example of Implicit Cursors</h2>
+            <img src="../image/implict.png" style="border: 2px solid #4361ee" alt="output image">
+        </section>
+        <section>
+            <h2 class="fonty">(ii) Explicit Cursors</h2>
+            <p>The Explicit cursors are defined by the programmers to gain more control over the context area. These
+                cursors should be defined in the declaration section of the PL/SQL block. It is created on a SELECT
+                statement which returns more than one row.</p>
+            <span style="color:blue">Steps for Explicit Cursors</span>
+            <p>1. Declare <br>
+                2. open <br>
+                3. fetch <br>
+                4. close </p>
+
+            <p> <span style="color:blue">1. Declare :- </span></b1>It defines the cursor with a name and the associated
+                SELECT statement.</p>
+            <h2 class="fonty">Syntax of Declare Cursors</h2>
+            <p>CURSOR name IS <br>
+                SELECT statement; </p>
+            <p><span style="color:blue">2. Open :- </span>It is used to allocate memory for the cursor and make it easy
+                to fetch the rows returned by the SQL statements into it.</p>
+            <h2 class="fonty">Syntax of open Cursors</h2>
+            <p>OPEN cursor_name;</p>
+            <p><span style="color:blue">3. fetch :- </span>It is used to access one row at a time. You can fetch rows
+                from the above-opened cursor as follows</p>
+            <h2 class="fonty">Syntax of fetch the Cursors </h2>
+            <p>FETCH cursor_name INTO variable_list;</p>
+            <p><span style="color:blue">4. close :</span>It is used to release the allocated memory. The following
+                syntax is used to close the above-opened cursors.</p>
+            <h2 class="fonty">Syntax of close the Cursors :</h2>
+            <p>Close cursor_name; </p>
+        </section>
+        <section>
+            <h2 class="fonty">Syntax of Explicit Cursors</h2>
+            <p>CURSOR cursor_name IS select_statement;</p>
+            <h2 class="fonty">Example of Explicit Cursors</h2>
+            <img src="../image/cursor program1.png" style="border: 2px solid #4361ee" alt="output image">
+        </section>
+        <section>
+            <h2 class="fonty">Cursor for loop</h1>
+                <p>The cursor FOR LOOP implicitly its loop index as a record of type%ROWTYPE, opens a cursor, repeatedly
+                    fetcges rows of the values from the active set into fields in the record, and then close the cursor
+                    when all rows have been processed or when the EXIT command is encountered.</p>
+                <p>Example of Cursor for loop</p>
+                <img src="../image/for cursor.png" style="border: 2px solid #4361ee" alt="output image">
+        </section>
+    </div>
+</body>
+
+</html>

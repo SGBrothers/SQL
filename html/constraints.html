@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>Constraint</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank">
+                            <h4>Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="package.html" target="_blank">
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h2 class="fonty">Defined Constraint</h2>
+            <p>Constraints in SQL means we are applying certain conditions or restrictions on the database. This further means that before inserting data into the database, we are checking for some conditions. If the condition we have applied to the database holds true for the data which is to be inserted, then only the data will be inserted into the database tables.</p>
+            <p>Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.</p>
+    
+           <span style="color:blue">Constraints in SQL can be categorized into two types:</span>
+            <p> <i>1. Column Level Constraint </i> : A Column Level Constraint can only be defined when we are defining the column in the table.</p>
+            <p><i> 2. Table Level Constraint</i>  :  A Table Level Constraint can be defined when we are creating the table or modified the structured of the table. </p>
+           <span>There are different types of constraint</span> 
+           <p>
+            <i>
+            1. Primary Key constraint <br>
+              2. Not null constraint <br>
+              3. Unique constraint<br>
+              4. Check constraint<br>
+              5. Default constraint<br>
+              6. Foreign key constraint
+            </i>
+            </p>
+           <img src="../image/constraint.png" >
+        </section>
+        <section>
+            <h2 class="fonty">Primary key Constraint</h2>
+            <p>The PRIMARY KEY constraint uniquely identifies each record in a table.</p>
+            <p>Primary keys must contain UNIQUE values, and cannot contain NULL values.</p>
+            <p>A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).</p>
+            <p>A primary key constraint is the column level as well as Table level constraint.</p>
+           <span style="color:blue">Syntax of Primary Key Constraint</span>
+            <p><Mysql>CREATE TABLE TableName (    <br>
+                ColumnName1 datatype,                      <br>
+                ColumnName2 datatype,                      <br>
+                ….,                                         <br>
+                ColumnNameN datatype,                       <br>
+                constraint constraint_name primary key(ColumnName)<br>
+                ); </p>
+            
+           <p><span style="color:blue">Example of Primary Key Constraint</span></p>
+            <img src="../image/primary key constraint create1.png">
+            <span style="color:blue">Syntax of Drop primary Key Constraint</span>
+            <p>Mysql> ALTER TABLE table_name DROP Constraint constraint_name ; </p>
+           <p><span style="color:blue">Example of Drop primary Key Constraint</span></p>
+            <img src="../image/drop primary keys.png">
+        </section>
+        <section>
+            <h2 class="fonty">Not Null constraint</h2>
+        <p>Not Null is a column level constraint.</p>
+        <p>when not null is defined then we cannot give null values in that column.</p>
+        <p>This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.</p> 
+        <span style="color:blue">Syntax Of Not Null constraint</span>
+        <p>Mysql> </b>CREATE TABLE TableName ( <br>
+            ColumnName1 datatype NOT NULL, <br>
+             ColumnName2 datatype,<br>
+             …., <br>
+             ColumnNameN datatype<br>
+             );  </p>
+        
+        <p><span style="color:blue">Example of Not Null constraint</span></p>
+        <img src="../image/not null constraints.png">
+        </section>
+        <section>
+            <h2 class="fonty">Unique Constraint</h2>
+            <p>Duplicate values are not allowed in the columns to which the UNIQUE constraint is applied.</p>
+            <p> The column with the unique constraint will always contain a unique value.</p>
+            <p>Using the UNIQUE constraint, you can also modify the already created tables.</p>
+            <p>This constraint can be applied to one or more than one column of a table, which means more than one unique constraint can exist on a single table.</p>
+    
+            <span style="color:blue">Syntax Of Unique Constraint</span>
+            <p>Mysql> </b>CREATE TABLE TableName ( <br>
+                ColumnName1 datatype UNIQUE, <br>
+                ColumnName2 datatype,<br>
+                …., <br>
+                ColumnNameN datatype <br>
+                );</p>
+            
+            <P><span style="color:blue">Example of Unique Constraint</span></p>
+            <img src="../image/unique contraints.png">
+        </section>
+        <section>
+            <h2 class="fonty">Check Constraint</h2>
+            <p>The CHECK constraint is used to limit the value range that can be placed in a column.</p>
+            <p>If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row. </p>
+            <p>Whenever a check constraint is applied to the table's column, and the user wants to insert the value in it, then the value will first be checked for certain conditions before inserting the value into that column.</p>
+    
+            <span style="color:blue">Syntax Of Check Constraint</span>
+            <p>Mysql> CREATE TABLE TableName ( <br>
+                ColumnName1 datatype CHECK (ColumnName1 Condition), <br>
+                ColumnName2 datatype,<br>
+                …., <br>
+                ColumnNameN datatype<br>
+                );</p>
+            
+                <p><span style="color:blue">Example of check  constraint</span></p>
+            <img src="../image/check constraints.png">
+        </section>
+        <section>
+            <h2 class="fonty">Default Constraint</h2>
+            <p>The DEFAULT constraint is used to set a default value for a column.</p>
+            <p>The default value will be added to all new records, if no other value is specified.</p>
+            <p>Whenever a default constraint is applied to the table's column, and the user has not specified the value to be inserted in it, then the default value which was specified while applying the default constraint will be inserted into that particular column.</p>
+            <span style="color:blue">Syntax Of Default Constraint</span>
+            <p>Mysql> CREATE TABLE TableName ( <br> 
+                ColumnName1 datatype DEFAULT Value, <br>
+                ColumnName2 datatype, <br>
+                …., <br>
+                ColumnNameN datatype <br>
+                ); </p>
+            
+                <P><span style="color:blue">Example of Default Constraint</span></p>
+            <img src="../image/default constraints.png">
+        </section>
+        <section>
+            <h2 class="fonty">Foreign Key Constraint</h2>
+            <p>Foreign key constraint is also Known as Referential Integrity Constraint. </p>
+            <p>It maintains the integrity data by checking the refrence of the data from the primary key table.</p>
+            <p>The table on which we have Primary key is Known as Parent table/ Master table / Primary table.</p>
+            <p>The table on which on have Foreign key is also Known as Child table/ Slave table/ Secondary table.</p>
+            <p>The column   of the master table and the slave table datatype should be same (column name can be different </p>
+            <p>The table can have Multiple foreign key.</p>
+            <p>If the master table we are having the two column on which primary key is apply then is a slave table then should be two which are refrence to the master table column.</p>
+            <span style="color:blue">Syntax Of Foreign Key Constraint</span>
+            <p>Mysql>CREATE TABLE tablename( <br>
+                ColumnName1 Datatype , <br>
+                ColumnNameN Datatype, <br>
+                FOREIGN KEY( ColumnName ) REFERENCES PARENT_TABLE_NAME(Primary_Key_ColumnName) <br>
+            );</p>
+    
+                <p>Mysql> </b>ALTER TABLE table_name  ADD CONSTRAINT constraint_name FOREIGN KEY(columName) <br>
+                                REFERENCES PARENT_TABLE_NAME(Primary_Key_ColumnName) ;</p>
+            
+           <p><span style="color:blue">Example of Foreign Key Constraint</span></p>
+            <img src="../image/foreign key constraints.png">
+            <h2 class="fonty">Foreign Key Constraint Parameter</h2>
+             <p>There are Four Types of Foreign Key Constraint Parameter : </p>
+            <p>
+                <i>
+                1. On delete set null <BR>
+               2. On delete cascade <BR>
+               3. On update set null <BR>
+               4. On update cascade
+                </i>
+            </p>
+             <p> <span style="color:blue">1. ON DELETE SET NULL :- </span> A foreign key with "set null on delete" means that if a record in the parent table is deleted, then the corresponding records in the child table will have the foreign key fields set to NULL.</p>
+    
+             <span style="color:blue">Syntax Of  On delete set null</span>
+             <p><b>Mysql> </b>CREATE TABLE table_name( <br>
+                   Column1 datatype, <br>
+                   Column2 datatype, <br>
+                   FOREIGN KEY(ColumnName) <br>
+                   REFERENCES PARENT_TABLE(ColumnName) ON DELETE SET NULL <br>
+             );</p><br>
+             <p><span style="color:blue">2. ON UPDATE SET NULL :</span>I know that when setting cascade actions for a table, we may use ON UPDATE SET NULL to, well, set the foreign key field to null when the referenced row is updated.</p>
+    
+            <span style="color:blue">Syntax Of On update set null</span>
+            <p>Mysql> </b>CREATE TABLE table_name( <br>
+                Column1 datatype, <br>
+                Column2 datatype, <br>
+                FOREIGN KEY(ColumnName) <br>
+                REFERENCES PARENT_TABLE(ColumnName) ON UPDATE SET NULL <br>
+            ); </p>
+                
+            <p><span style="color:blue">Example of ON DELETE SET NULL and ON UPDATE SET NULL </span></p>
+            <img src="../image/on delte set null B.png">
+            <img src="../image/on delete set null1 A.png">
+             <p><span style="color:blue">3. ON DELETE CASCADE :</span>DELETE CASCADE Indicates that when the row in the parent table is deleted, the dependent rows in the child table will also be deleted</p>
+
+             <span style="color:blue">Syntax Of delete cascade</span>
+             <p>Mysql> </b>CREATE TABLE table_name( <br>
+                Column1 datatype, <br>
+                Column2 datatype,  <br>
+                FOREIGN KEY(ColumnName) <br>
+                REFERENCES PARENT_TABLE(ColumnName) ON DELETE CASCADE 
+             );</p>
+    
+             <p><span style="color:blue">4. ON UPDATE CASCADE :</span> ON UPDATE CASCADE clause in MySQL is used to update the matching records from the child table automatically when we update the rows in the parent table.</p>
+    
+            <span style="color:blue">Syntax Of On update cascade</span>
+             <p><b>Mysql> </b>CREATE TABLE table_name( <br>
+                Column1 datatype, <br>
+                Column2 datatype, <br>
+                FOREIGN KEY(ColumnName) <br>
+                REFERENCES PARENT_TABLE(ColumnName) ON UPDATE CASCADE <br>
+             );</p><br>
+    
+<p><span style="color:blue">Example of ON DELETE CASCADE and ON UPDATE CASCADE </span></p>
+            <img src="../image/on update cascade A.png"> 
+            <img src="../image/on update cascade1 B.png">
+        </section>
+        </div>
+        </body>
+        </html>
+        

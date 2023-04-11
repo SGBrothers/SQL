@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>Package</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank">
+                            <h4>Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="package.html" target="_blank">
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h2 class="fonty">Package</h2>
+            <p>A package is a way of logically storing the subprograms like procedures, functions, exception or cursor
+                into a single common unit. A package can be defined as an oracle object that is compiled and stored in
+                the database.</p>
+
+            <span style="color:blue">Advantages Of Package</span>
+            <p><span style="color:blue">1.</span>It gives modularity to our code. <br>
+                <span style="color:blue">2.</span>It helps to design the application easily. <br>
+                <span style="color:blue">3.</span> PLSQL Package helps to hide information with the help of public and
+                private items, data types, and subprograms. <br>
+                <span style="color:blue">4.</span>package allows maintaining information over all the transactions
+                without requiring to store it in the database. <br>
+                <span style="color:blue">5.</span> Packages help improve performance of execution.
+            </p>
+            </p>
+            <p><span style="color:blue">To create a package we create two things </span> <br>
+                <i>(i) Package specification</i> <br>
+                <i>(ii) Package body</i>
+            </p>
+            <img src="../image/package.png" style="border:2px solid #4361ee" alt="output image">
+        </section>
+        <section>
+            <h2 class="fonty">(i) Package specification </h2>
+            <p>In package specification we can declare the named procedure and named function. Package specification
+                consists of a declaration of all the public variables, cursors, objects, procedures, functions, and
+                exception.<br>The elements which are all declared in the specification can be accessed from outside of
+                the package. Such elements are known as a public element. The package specification is a standalone
+                element that means it can exist alone without package body.</p>
+
+            <span style="color:blue">Syntax of Package specification </span>
+            <p> CREATE [OR REPLACE] PACKAGE package_name IS <br>
+                procedure_specification; <br>
+                Function_specification;<br>
+                exception_declaration; <br>
+                END [package_name]; </p> <br>
+            <span style="color:blue">Example of Package specification </span>
+            <p>create or replace package pack As <br>
+                procedure p1(x number); <br>
+                function fun(y number) return number; <br>
+                end pack; </p><br>
+            <img src="../image/package created1.png" style="border:2px solid #4361ee" alt="output image">
+        </section>
+        <section>
+            <h2 class="fonty">(ii) Package body </h2>
+            <p>It consists of the definition of all the elements that are present in the
+                package specification. It can also have a definition of elements that are not declared in the
+                specification, these elements are called private elements and can be called only from inside the
+                package.
+            </p>
+
+            <span style="color:blue">Syntax of Package body </span>
+            <p> CREATE [OR REPLACE] PACKAGE BODY package_name IS <br>
+                procedure_defination; <br>
+                Function_defination;<br>
+                [EXCEPTION <br>
+                exception_handlers]; <br>
+                END [package_name]; </p> <br>
+
+            <span style="color:blue">Example of Package body </span>
+            <p>create or replace package body pack As<br><br>
+                procedure P1(x NUMBER) IS <br>
+                begin <br>
+                dbms_output.put_line('Its a procedure'); <br>
+                Dbms_output.put_line('The procedure output is : '||x); <br>
+                end P1; <br>
+                <br>
+                function fun(y number) return number IS <br>
+                num number := 100; <br>
+                begin <br>
+                Dbms_output.put_line('Its a function'); <br>
+                num := y+num; <br>
+                return(num); <br>
+                end fun; <br>
+                <br>
+                end pack; <br>
+            </p>
+
+            <img src="../image/package body1.png" style="border:2px solid #4361ee" alt="output image">
+</section>
+        <section>
+            <h2 class="fonty">Call a package</h2>
+            <span>Example of call Package</span>
+            <p>begin <br>
+                pack.p1(40); <br>
+                dbms_output.put_line('The fuction output is : '||pack.fun(100)); <br>
+                end;</p>
+            <img src="../image/call package1.png" style="border:2px solid #4361ee" alt="output image">
+            <br>
+            <h2 class="fonty">Drop a package</h2>
+            <span style="color:blue">Syntax for drop a package</span>
+            <p>drop package pack;</p>
+            <img src="../image/drop package1.png" style="border:2px solid #4361ee" alt="output image">
+        </section>
+        </div>
+        </body>
+        </html>
+        
+           

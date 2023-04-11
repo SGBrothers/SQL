@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>Clauses</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                        
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank">
+                            <h4>Functions</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="package.html" target="_blank" >
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h1 class="fonty">Conditional retrieval of rows</h1><br>
+            <H2 class="fonty">Where clause</H2>
+            <p>Conditional retrieval of rows from a database table is done by specifying the condition in the WHERE
+                clause of the SELECT statement.</p>
+            <p>Syntax :- Select column_name from table_name where condition;</p>
+            <p>Example :- select * from student where marks1=80;</p>
+            <img src="../image/where.png" alt="where clause">
+        </section>
+        <section>
+            <h2 class="fonty">Order by clause</h2>
+            <p>The order by clause to impose an order on the result of a query either in ascending or descending order.
+            </p>
+            <p>Syntax :- Select column_name from table_name [where condition] [order by column1, column2, columnN]
+                [asc|desc];</p>
+            <p>For Ascending</p>
+            <p>Example :- select * from student order by marks1;</p>
+            <img src="../image/asc.png" alt="asc order">
+            <p>For descending</p>
+            <p>Example :-select * from student order by marks1 desc;</p>
+            <img src="Images/pizza.png" alt="desc order">
+        </section>
+        <section>
+            <h2 class="fonty">Group by clause</h2>
+            <p>The group by clause is used with select statement to combine a group of rows based on the values of a
+                particular column or expression.</p>
+            <p>Syntax :- Select column_name, group_function (column) from table_name [where condition] [group by
+                group_by_expression] [order by column] ;</p>
+            <p>Example :-select count(class),class from student1 group by class;</p>
+            <img src="../image/group.png" alt="group clause"></a>
+        </section>
+        <section>
+            <h2 class="fonty">Having by clause</h2>
+            <p>This is similar to where condition but is used with group functions. Group functions cannot be used in
+                WHERE clause but can be used in HAVING clause.</p>
+            <p>Syntax :- Select column_name, group_function (column) from table_name [where condition] [group by
+                group_by_expression] [having having expression] [order by column] ;</p>
+            <p>Example : select count(marks1),marks1 from student group by marks1 having count(marks1)<2;< /p>
+                    <img src="../image/having.png" alt="having clause"></a>
+        </section>
+    </div>
+</body>
+
+</html>

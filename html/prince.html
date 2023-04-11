@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mysql</title>
+    <link rel="stylesheet" href="mysql_style.css">
+</head>
+<body>
+    <ul>
+        <li>Data defination language</li>
+        <ol>
+            <li><a href="">How to create database object</a></li>
+            <li><a href="">How to delete database object</a</li>
+        </ol>
+        <li>Data Manupilation language</li>
+        <ol>
+            <li><a href="">How to insert multiple rows of the table</a></li>
+            <li><a href="">How to delete all rows of the table</a></li>
+        </ol>
+    </ul>
+    <hr>
+
+    <hr>
+    <div>
+        <h1>DATA DEFINATION LANGUAGE(DDL)</h1>
+        <p>DDL stands for Data defination language. It is the subset of SQL commands used to create, modify and destroy databases and database objects like tables, views etc.</p>
+        <h2>Creating tables</h2>
+        <p>The create command is used to crate tables to store data. The columns name in the table must be unique. Columns names can be duplicated across tables</p>
+        <p>Syntax  :- create table table_name{ column_name1 datatype, column_name2 datatype .... column_nameN datatype};</p>
+        <p>Example :- create table student_record{ name varchar2(20), class varchar2(10), roll_no number(5), section varchar(1),marks number(5,2)};</p>
+        <a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+        <h2>Truncating a table</h2>
+        <p>The truncate command statement is used to delete all rows from a table and to release the storage space used by that table</p>
+        <p>Synatx :- truncate table table_name;</p>
+        <p>Example :- truncate table emp;</p>
+        <a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+        <h2>Alter</h2>
+        <p>Alter statement is used to modify the defination or structure of a table by modifying definition of its columns.</p>
+        <p>Add, modify and drop table columns</p>
+        <p>Syntax to add a column  :- alter table table_name add column_name datatype;</p>
+        <p>Example to add a column :- alter table emp add experience number(2);</p>
+        <p>Syntax to drop a column :- alter table table_name drop column column_name;</p>
+        <p>Example to add a column :- alter table emp drop column experience;</p>
+        <p>Syntax to modify a column  :- alter table table_name modify column_name datatype;</p>
+        <p>Example to modify a column :- alter table emp modify experience number(3);</p>
+        <a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+        <h2>Drop table</h2>
+        <p>drop statement removes the defination of a table</p>
+        <p>Syntax  :- drop table table_name;</p>
+        <p>Example :- drop table emp;</p>
+        <a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+    </div>
+    <hr>
+   
+    <hr>
+    <div>
+        <h1>TRANSACTION CONTROL LANGUAGE(TCL)</h1>
+        <h2>Commit and Rollback</h2>
+        <p>The commit statement is used to make changes to data (inserts, updates, deltes) permanent to the database.</p>
+        <P>The rollback statement is used to discard parts in case an error is detected during the DML operation</P>
+        <a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+    </div>
+    <hr>
+    <div>
+        <h1>DATA QUERY LANGUAGE(DQL)</h1>
+        <h2>Select statement</h2> 
+        <p>Select statement is used to retrieve data from a table in the database. A query may retrieve information from specified columns of from all of the columns in the table.</p>
+        <p>Syntax  :- select column_name from table_name [where clause] [group by clause] [having clause] [order by clause];</p>
+        <p>Example :- select ename form emp;</p>
+        <a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+    </div>
+    <hr>
+    <div>
+        
+    <hr>
+<div>
+   
+</div>
+<hr>
+<div>
+<h1>VIEWS</h1>
+<h2>Introduction to views</h2>
+<p>Views is a virtual table, through which a selective portion of the data from one or more tables cal be seen. A view contains no data of its own but it is like a window through which data from tables can be viewed of changed. The tables on which a view is based are called base tables. Base tables might in turn be actual tables or might ne views themselves. All operations performed ona view actually effect the base table of the view. DML operations on a view like INSERT, UPDATE, DELETE affects the data in the original table upon which the view is based. you can use views in almost the same way as tables. </p>
+<p>Syntax  :- create view view_name as select column1, column2 from table_name [where conditon];</p>
+<p>Example :- create view v1 as select *from emp where deptno = 20;</p>
+<a href="Images/pizza.png"><img src="Images/pizza.png" alt="sorry"></a>
+</div>
+</body>
+</html>

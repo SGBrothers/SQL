@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>Procedure</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank">
+                            <h4>Functions</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="package.html" target="_blank" >
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h2 class="fonty">Procedure</h2>
+            <p>A procedure or stored procedure i a named PL/SQL block that can accept parameters, and be invoked.
+                Generally speaking, a procedure is mainly used to perfrom one or more specific task. A procedure has a
+                header, a declaration section an executable section, and an optional exception-handling section.<br>
+                A procedure can be complied and stored in the Database as a schema object. procedure promote reusability
+                and maintainability. when validated, they can be used in any number of apllication. if the requriements
+                change, only the procedure needs to be updated.</p>
+            <p> You can create a new procedure with the CREATE PROCEDURE statement, which may decalare a list of
+                parameters and must define the actions to be performed by the standard PL/SQL block. The CREATE clause
+                enables you to create stand-alone procedure, which are stroed in an oracle Database.</p><br>
+        </section>
+        <section>
+            <h2 class="fonty">Syntax of Create a Procedure</h2>
+            <p>CREATE [OR REPLACE] PROCEDURE procedure_name <br>
+                [(parameter1 [mode 1] datatype1, <br>
+                parameter2 [mode 2] datatype2, <br>
+                .....)] IS <br>
+                BEGIN <br>
+                PL/SQL executed statements <br>
+                [Exception <br>
+                Exception handlers] <br>
+                END [procedure_name];
+            </p>
+           <p><span style="color:blue">Example of Create a Procedure</span></p>
+            <img src="../image/create procedure1.png" style="border: 2px solid #4361ee" alt="output image">
+</section>
+    <section>
+            <h2 class="fonty">Calling a Procedure</h2>
+            <p>A procedure is called as a PL/SQL statement. A procedure can be called from any PL/SQL program by giving
+                its names followed by the parameters.</p>
+                <p><span style="color:blue">Example of calling a Procedure</span></p>
+            <img src="../image/calling procedure1.png" style="border: 2px solid #4361ee" alt="output image">
+            <h2 class="fonty">Dropping a Procedure</h2>
+            <p>To drop a procedure, DROP PROCEDURE statement is used. In order to drop a procedure, one must either own
+                the procedure or have DROP ANY PROCEDURE system privilege.</p>
+
+            <span style="color:blue">Syntax of Drop a Procedure</span>
+            <p>DROP PROCEDURE procedure_name;</p>
+            <p><span style="color:blue">Example of Drop a Procedure</span></p>
+            <img src="../image/drop preocdure1.png" style="border: 2px solid #4361ee" alt="output image" >
+            </section>
+            </div>
+            </body>
+            </html>
+            

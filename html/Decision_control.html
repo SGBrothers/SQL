@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>Decision Control structure</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank" >
+                            <h4>Functions</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="package.html" target="_blank" >
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h2 class="fonty">Decision control structure</h2>
+            <p>The structure of the PL/SQL IF Statement is similar to the structure of IF Statement in other Procedural
+                Language. It allows PL/SQL to perfrom actions selectively based on conditions.</p>
+              <p><b>There are three forms of IF Statement : </b><br>
+                (i) IF- THEN Statement<br>
+                (ii) IF- THEN- ELSE Statement<br>
+                (iii) IF- THEN- ELSIF Statement
+            </p>
+        </section>
+        <section>
+            
+               <h2 class="fonty">(i) IF- THEN Statement</h2>
+                <p>if then statement if then statement is the most simple decision-making
+                statement. It is used to decide whether a certain statement or block of statements will be executed or not
+                i.e if a certain condition is true then a block of statement is executed otherwise not.
+                </p>
+            <h2 class="fonty">The Syntax of IF- THEN Statement </h2>
+            <p>IF condition THEN <br>
+                statement; <br>
+                END IF; </p>
+            <h2 class="fonty">The Example of IF- THEN Statement </h2>
+            <p>declare <br>
+                a number; <br>
+                b number; <br>
+                begin <br>
+                a := 10; <br>
+                b := 5; <br>
+                if a>b then <br>
+                dbms_output.put_line('A is greater than B'); <br>
+                end if; <br>
+                end;</p>
+            <img src="../image/if1.png" alt="output" style="border:2px solid #4361ee">
+        </section>
+        <section>
+                <h2 class="fonty"> (ii) IF- THEN- ELSE Statement </h2>
+            <p>The if statement alone tells us that if a condition is true it
+                will execute a block of statements and if the condition is false it won’t. Here comes the else statement. We
+                can use the else statement with if statement to execute a block of code when the condition is false.
+            </p>
+            <h2 class="fonty">The Syntax of IF- THEN- ELSE Statement </h2>
+            <p>IF condition THEN <br>
+                statement; <br>
+                ELSE <br>
+                Statement; <br>
+                END IF;</p>
+            <h2 class="fonty">The Example of IF- THEN- ELSE Statement </h2>
+            <p>declare <br>
+                age number; <br>
+                begin <br>
+                select age into age from student where rollno=4; <br>
+                if age>18 then <br>
+                dbms_output.put_line(age ||' Eligible to vote'); <br>
+                else <br>
+                dbms_output.put_line(age ||' not Eligible to vote'); <br>
+                end if; <br>
+                end;</p>
+            <img src="../image/student table1.png" alt="output" style="border:2px solid #4361ee">
+            <img src="../image/ifelse1.png" alt="output" style="border:2px solid #4361ee">
+        </section>
+        <section>
+                <h2 class="fonty">(iii) IF- THEN- ELSIF Statement </h2>
+                <p>The IF-THEN-ELSIF statement allows you to choose between several
+                alternatives. An IF-THEN statement can be followed by an optional ELSIF...ELSE statement. The ELSIF clause
+                lets you add additional conditions.
+            </p>
+            <h2 class="fonty">The Syntax of IF- THEN- ELSIF Statement </h2>
+            <p>IF condition THEN <br>
+                statement; <br>
+                ELSIF condition THEN <br>
+                statement; <br>
+                ELSE <br>
+                statement;
+                END IF;</p> 
+            <h2 class="fonty">The Example of IF- THEN- ELSIF Statement </h2>
+            <p>Declare <br>
+                age number; <br>
+                Begin <br>
+                if ( a = 10 ) THEN <br>
+                dbms_output.put_line('Value of a is 10' ); <br>
+                ELSIF ( a = 20 ) THEN <br>
+                dbms_output.put_line('Value of a is 20' ); <br>
+                ELSIF ( a = 30 ) THEN <br>
+                dbms_output.put_line('Value of a is 30' ); <br>
+                ELSE <br>
+                dbms_output.put_line('None of the values is matching'); <br>
+                END IF; <br>
+                dbms_output.put_line('Exact value of a is: '|| a ); <br>
+                END; </p><br>
+    
+            <img src="../image/ifelseif1.png" alt="output" style="border:2px solid #4361ee">
+        </section>
+        </div>
+        </body>
+        </html>

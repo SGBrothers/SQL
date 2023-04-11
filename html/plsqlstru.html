@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>PLSQL Block Structure</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                            <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                            <h4>Decision Control Structure</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank" >
+                            <h4>Functions</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="package.html" target="_blank" >
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h1 class="fonty"> PL/SQL Block structure </h1>
+            <p>PL/SQL is a block-structured language. This means that programs can be divided into logical blocks.<br>
+                A PL/SQL block consists of up to three sections : <br>
+                (i) Declarative<br>
+                (ii) Executable<br>
+                (iii) Exception Handling</p>
+
+            <img src="../image/blockstructured1.png" alt="blockstructured">
+        </section>
+        <section>
+            <h2 class="fonty">(i) Declarative</h2>
+            <p>This is the first section of the PL/SQL blocks. This section is an optional part. <br> This is the
+                section in
+                which the declaration of variables, cursors, exceptions, subprograms, pragma instructions and
+                collections
+                that are needed in the block will be declared. Below are few more characteristics of this part.</p>
+            <p>This particular section is optional and can be skipped if no declarations are needed.</p>
+            <p>This should be the first section in a PL/SQL block, if present.</p>
+            <p>This section starts with the keyword ‘DECLARE’ for triggers and anonymous block. For other subprograms,
+                this
+                keyword will not be present. br
+                Instead, the part after the subprogram name definition marks the declaration section</p>
+            <p>This section should always be followed by execution section.</p>
+        </section>
+        <section>
+            <h2 class="fonty">(ii) Executable</h2>
+            <p>Execution part is the main and mandatory part which actually executes the code that
+                is written inside it. Since the PL/SQL expects the executable statements from this block this cannot be
+                an
+                empty block, i.e., it should have at least one valid executable code line in it. Below are few more
+                characteristics of this part.</p>
+            <p>This can contain both PL/SQL code and SQL code.</p>
+            <p>This can contain one or many blocks inside it as a nested block.</p>
+            <p>This section starts with the keyword ‘BEGIN’.</p>
+            <p>This section should be followed either by ‘END’ or Exception-Handling section (if present)</p>
+        </section>
+        <section>
+            <h2 class="fonty">(iii) Exception Handling</h2>
+            <P>The exception is unavoidable in the program which occurs at run-time and to
+                handle this Oracle has provided an Exception-handling section in blocks. This section can also contain
+                PL/SQL statements. This is an optional section of the PL/SQL blocks.</p>
+            <p>This is the section where the exception raised in the execution block is handled.</p>
+            <p>This section is the last part of the PL/SQL block.</p>
+            <p>Control from this section can never return to the execution block.</p>
+            <p>This section starts with the keyword ‘EXCEPTION’.</p>
+            <p>This section should always be followed by the keyword ‘END’.</p>
+        </section>
+    </div>
+    </body>
+    </html>

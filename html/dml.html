@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>DML Commands</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img {
+            height: 300px;
+            margin: 20px;
+        }
+
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+            /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+
+        section {
+            box-shadow: 0px 0px 8px purple;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                        
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                        <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                            <h4>Variable Declartion And Assignment</h4>
+                            </a></div>
+                            <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                                <h4>Decision Control Structure</h4>
+                             </a></div>
+                             <div class="submenuitems"><a href="loop.html" target="_blank">
+                                <h4>Iterative Control Structure</h4>
+                            </a></div>
+                            <div class="submenuitems"><a href="cursor.html" target="_blank">
+                                <h4>Cursor</h4>
+                            </a></div>
+                            <div class="submenuitems"><a href="procedure.html" target="_blank">
+                                <h4>Procedure</h4>
+                            </a></div>
+                        <div class="submenuitems"><a href="function.html" target="_blank" >
+                                <h4>Functions</h4>
+                            </a></div>
+                            <div class="submenuitems"><a href="package.html" target="_blank" >
+                                <h4>Package</h4>
+                            </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h1 class="fonty">DATA MANIPULATION LANGUAGE(DML)</h1>
+            <p>DML stands for Data manipulation language. it is database language, which enables user to manipulation
+                datain the database.</p>
+        </section>
+        <section>
+            <h2 class="fonty">Inserting values into a table</h2>
+            <p>Insert statement is used to insert new row or records into a table. Values can be inserted for all the
+                columns or for the selected columns of the table.</p>
+            <p>Syntax :- insert into table_name values(value1, value2, value3, .... valueN);</p>
+            <p>Example :- insert into student values(1, 'abc');</p>
+            <img src="../image/insert.png" alt="insert data">
+        </section>
+        <section>
+            <h2 class="fonty">Deleting row from a table</h2>
+            <p>Delete statement is used to delete rows from a table </p>
+            <p>Syntax :- delete from table_name[where condition];</p>
+            <p>Example :- delete from student where rollno=1;</p>
+            <img src="../image/delete.png" alt="delete data"></a>
+        </section>
+        <section>
+            <h2 class="fonty">Update columns of a table</h2>
+            <p>Update statement is used to update or modify the existing rows in a table.</p>
+            <p>Syntax :- update table_name set column_name1 = value1, column_name2 = value2 ... [where condition];</p>
+            <p>Example :- update student set name = 'xyz' where rollno=3;</p>
+            <img src="../image/update.png" alt="update data">
+
+        </section>
+    </div>
+    </body>
+    </html>

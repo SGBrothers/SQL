@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/small.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Mono:wght@700&family=Orbitron:wght@600&family=Roboto+Slab:wght@600&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
+    <title>DDL Commands</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style type="text/css">
+        h1 {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4361ee;
+        }
+
+        img{
+            height:300px;
+            margin:20px;
+        }
+        .only {
+            margin: 2px;
+            padding: 2px;
+        }
+
+         .div {
+            text-align: justify;
+        }
+
+        section {
+
+            margin: 14px;
+            padding: 4px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .fonty {
+            font-size: 30px;
+            color: blueviolet;
+                /* box shadow : x-axis | y-axis |blur|range|color*/
+        }
+        section{
+            box-shadow: 0px 0px 8px   purple ;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="first">
+        <div class="one">
+            <div class="image1">
+                <p>codeweb</p>
+            </div>
+            <div class="sql">
+                <h1>my sql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="ddl.html" target="_blank">
+                            <h4>DDL Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dml.html" target="_blank">
+                            <h4>DML Commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="groupfunction.html" target="_blank">
+                            <h4>Group Functions</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="conditional_retrieval_rows.html" target="_blank">
+                            <h4>Clauses</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="dqltcl.html" target="_blank">
+                            <h4>TCl And DQl commands</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="views.html" target="_blank">
+                            <h4>Views</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="pattern_matching.html" target="_blank">
+                            <h4>Pattern Matching</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="constraints.html" target="_blank">
+                            <h4>Constraint</h4>
+                        </a></div>
+                        
+                </div>
+            </div>
+            <div class="plsql">
+                <h1>plsql</h1>
+                <div class="submenu">
+                    <div class="submenuitems"><a href="plsqlstru.html" target="_blank">
+                        <h4>PLSQL Block Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="variable_decl_and_assing.html" target="_blank">
+                        <h4>Variable Declartion And Assignment</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="Decision_control.html" target="_blank">
+                        <h4>Decision Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="loop.html" target="_blank">
+                            <h4>Iterative Control Structure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="cursor.html" target="_blank">
+                            <h4>Cursor</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="procedure.html" target="_blank">
+                            <h4>Procedure</h4>
+                        </a></div>
+                    <div class="submenuitems"><a href="function.html" target="_blank" >
+                            <h4>Functions</h4>
+                        </a></div>
+                        <div class="submenuitems"><a href="package.html" target="_blank" >
+                            <h4>Package</h4>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="only">
+        <section>
+            <h1 class="fonty">DATA DEFINATION LANGUAGE(DDL)</h1>
+            <p>DDL stands for Data defination language. It is the subset of SQL commands used to create, modify and
+                destroy databases and database objects like tables, views etc.</p>
+        </section>
+        <section>
+            <h2 class="fonty">Creating database</h2>
+            <p>A database is used to store the collection of records in an organised form.<br>It allows us to hold the
+                data into tables,rows,colums and to find the relevant information frequently</p>
+            <p>The create command is used to create database to store data. </p>
+            <p>Syntax :- create database database_name;</p>
+            <p>Example :- create datbase bca;</p>
+            <img src="../image/crtedatabase.png" alt="sorry">
+        </section>
+        <section>
+            <h2 class="fonty">Creating tables</h2>
+            <p>The create command is used to create tables to store data. The columns name in the table must be unique.
+                Columns names can be duplicated across tables</p>
+            <p>Syntax :- create table table_name{ column_name1 datatype, column_name2 datatype .... column_nameN
+                datatype};</p>
+            <p>Example :- create table student{ name varchar(20), class varchar(10), rollno int};</p>
+            <img src="../image/crtetable.png" alt="cretae table">
+        </section>
+        <section>
+            <h2 class="fonty">Truncating a table</h2>
+            <p>The truncate command statement is used to delete all rows from a table and to release the storage space
+                used by that table</p>
+            <p>Synatx :- truncate table table_name;</p>
+            <p>Example :- truncate table student;</p>
+            <img src="../image/truncatetable.png" alt="truncate image">
+        </section>
+        <section>
+            <h2 class="fonty">Alter</h2>
+            <p>Alter statement is used to modify the defination or structure of a table by modifying definition of its
+                columns.</p>
+            <p>Add, modify and drop table columns</p>
+            <p>Syntax to add a column :- alter table table_name add column_name datatype;</p>
+            <p>Example to add a column :- alter table student add marks int;</p>
+            <img src="../image/addmarks.png" alt="add marks">
+            <p>Syntax to drop a column :- alter table table_name drop column_name;</p>
+            <p>Example to add a column :- alter table student drop marks;</p>
+            <img src="../image/dropmarks.png" alt="drop marks">
+            <p>Syntax to modify a column :- alter table table_name modify column_name datatype;</p>
+            <p>Example to modify a column :- alter table student modify rollno varchar(20);</p>
+            <img src="../image/modifyroll.png" alt="modify roll">
+        </section>
+        <section>
+            <h2 class="fonty">Drop table</h2>
+            <p>drop statement removes the defination of a table</p>
+            <p>Syntax :- drop table table_name;</p>
+            <p>Example :- drop table student;</p>
+            <img src="../image/droptable.png" alt="drop table">
+
+        </section>
+    </div>
+</body>
+</html>
